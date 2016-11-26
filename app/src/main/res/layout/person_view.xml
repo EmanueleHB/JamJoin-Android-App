@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="4dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/profile"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView2"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentStart="false"
+        android:src="#50000000"
+        android:layout_alignTop="@+id/nameTextView"
+        android:layout_marginTop="-8dp"
+        android:layout_alignBottom="@+id/imageView"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Emanuele di Vizio"
+        android:id="@+id/nameTextView"
+        style="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="@color/abc_primary_text_material_dark"
+        android:layout_above="@+id/tagsText"
+        android:layout_marginLeft="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#Java, #Android, #Jesus"
+                android:id="@+id/tagsText"
+                android:layout_alignStart="@+id/nameTextView"
+                android:layout_marginBottom="8dp"
+                android:layout_alignParentBottom="false"
+                android:layout_alignBottom="@+id/imageView"
+                android:layout_marginTop="8dp"
+                style="@style/Base.TextAppearance.AppCompat.Caption"
+                android:textColor="@color/abc_secondary_text_material_dark"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
