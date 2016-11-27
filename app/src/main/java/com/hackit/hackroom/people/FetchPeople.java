@@ -8,5 +8,5 @@ import rx.Observable;
  * Created by emanueledivizio on 26/11/16.
  */
 public interface FetchPeople {
-     Observable<Person> fetchPeople(int number);
+     Observable<Person> fetchPeople(int number, String query);
 }

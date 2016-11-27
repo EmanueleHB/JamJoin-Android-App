@@ -50,8 +50,8 @@ public class PersonListView extends RelativeLayout {
         ItemClickSupport.addTo(recyclerView).setOnItemClickListener((recyclerView1, position, v) -> {
             homeworkListViewModel.click(adapter.getItem(position));
         });
-        homeworkListViewModel.fetchPeople().subscribeOn(Schedulers.newThread()).observeOn(AndroidSchedulers.mainThread()).subscribe(person -> {
-            adapter.addItem(person);
+        homeworkListViewModel.fetchPeople().subscribeOn(Schedulers.newThread()).observeOn(AndroidSchedulers.mainThread()).subscribe(people -> {
+            adapter.setItems(people);
         }, Throwable::printStackTrace, () -> {});
     }
 }
