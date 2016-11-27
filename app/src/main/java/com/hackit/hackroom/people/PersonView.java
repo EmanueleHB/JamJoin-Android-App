@@ -17,6 +17,8 @@ import butterknife.ButterKnife;
  * Created by emanueledivizio on 26/11/16.
  */
 public class PersonView extends RelativeLayout {
+    @BindView(R.id.tagsText)
+    TextView tags;
     @BindView(R.id.imageView)
     ImageView image;
     @BindView(R.id.nameTextView)
@@ -46,6 +48,7 @@ public class PersonView extends RelativeLayout {
     public void setViewModel(PersonVM viewModel) {
         this.viewModel = viewModel;
         nameTxt.setText(viewModel.getName());
+        tags.setText(viewModel.getInterests());
         Picasso.with(getContext()).load(viewModel.getImage()).into(image);
 
     }

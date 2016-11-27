@@ -7,7 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.hackit.hackroom.people.FetchPeopleMock;
+import com.hackit.hackroom.people.FetchPeopleHeroku;
 import com.hackit.hackroom.people.PersonListViewModel;
 import com.hackit.hackroom.person.ProfileActivity_;
 import com.jakewharton.rxbinding.support.v7.widget.RxSearchView;
@@ -31,7 +31,8 @@ public class PeopleActivity extends AppCompatActivity {
         toolbar.setTitle("JamJoin");
         setSupportActionBar(toolbar);
 
-        homeworkListViewModel = new PersonListViewModel(new FetchPeopleMock(), 10);
+        homeworkListViewModel = new PersonListViewModel(new FetchPeopleHeroku(getResources().getStringArray(R.array.labels)
+        ), 10);
 
         PeopleActivityFragment fragment = new PeopleActivityFragment();
         getSupportFragmentManager().beginTransaction().add(R.id.container, fragment).commit();

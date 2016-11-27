@@ -52,7 +52,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="#Java, #Android, #Jesus"
+                android:text="#Java, #Android, #Kant"
                 android:id="@+id/tagsText"
                 android:layout_alignStart="@+id/nameTextView"
                 android:layout_marginBottom="8dp"
