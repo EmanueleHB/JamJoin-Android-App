@@ -106,4 +106,8 @@
         <item>"#Guitars"</item>
         <item>"#KingCrimson"</item>
     </array>
+
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

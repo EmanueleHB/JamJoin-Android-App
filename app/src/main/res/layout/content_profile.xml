@@ -42,7 +42,7 @@
             android:layout_alignLeft="@+id/aboutMe"
             android:layout_marginTop="16dp"
             style="@style/Base.TextAppearance.AppCompat.Large"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="8dp"/>
 
         <eu.fiskur.chipcloud.ChipCloud
             xmlns:chipcloud="http://schemas.android.com/apk/res-auto"
@@ -61,6 +61,29 @@
             android:layout_below="@+id/textView2"
             android:layout_alignParentStart="false"
             android:layout_alignLeft="@+id/aboutMe"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:id="@+id/textView"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentStart="false"
+            android:layout_below="@+id/chip_cloud"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_marginTop="16dp"
+            style="@style/Base.TextAppearance.AppCompat.Large"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Looking for a team!"
+            android:id="@+id/textView3"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentStart="false"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_below="@+id/textView"
             android:layout_marginTop="16dp"/>
 
     </RelativeLayout>
