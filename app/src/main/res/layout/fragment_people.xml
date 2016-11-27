@@ -1,43 +1,19 @@
-<android.support.design.widget.CoordinatorLayout
-xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:fitsSystemWindows="true"
-tools:context="com.hackit.hackroom.PeopleActivity">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
 
-<android.support.design.widget.AppBarLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:theme="@style/AppTheme.AppBarOverlay">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="?attr/actionBarSize"
+                tools:context="com.hackit.hackroom.PeopleActivityFragment"
+                tools:showIn="@layout/activity_people">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+    <com.hackit.hackroom.people.PersonListView
+        android:id="@+id/person_list"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        app:popupTheme="@style/AppTheme.PopupOverlay"></android.support.v7.widget.Toolbar>
+        android:layout_height="match_parent"
+        />
 
-</android.support.design.widget.AppBarLayout>
+</RelativeLayout>
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                    xmlns:tools="http://schemas.android.com/tools"
-
-                    android:layout_marginTop="?attr/actionBarSize"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    tools:context="com.hackit.hackroom.PeopleActivityFragment"
-                    tools:showIn="@layout/activity_people">
-
-        <com.hackit.hackroom.people.PersonListView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/person_list"
-            />
-
-    </RelativeLayout>
-
-</android.support.design.widget.CoordinatorLayout>
