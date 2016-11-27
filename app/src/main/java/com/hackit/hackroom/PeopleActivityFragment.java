@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import com.hackit.hackroom.people.FetchPeopleMock;
 import com.hackit.hackroom.people.PersonListView;
 import com.hackit.hackroom.people.PersonListViewModel;
+import com.hackit.hackroom.person.ProfileActivity_;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -29,7 +30,11 @@ public class PeopleActivityFragment extends Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_people, container, false);
         ButterKnife.bind(this, v);
-        personListView.setViewModel(new PersonListViewModel(new FetchPeopleMock(), 10));
+        PersonListViewModel homeworkListViewModel = new PersonListViewModel(new FetchPeopleMock(), 10);
+        homeworkListViewModel.observeItemCLick().subscribe(person -> {
+            ProfileActivity_.intent(this).name(person.getName()).url(person.getImage()).start();
+        });
+        personListView.setViewModel(homeworkListViewModel);
         return v;
     }
 }

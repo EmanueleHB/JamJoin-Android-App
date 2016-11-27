@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.hackit.hackroom.person.ProfileActivity"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About me"
+            android:id="@+id/aboutMe"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            style="@style/Base.TextAppearance.AppCompat.Large"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="“Young and passionate developer, philosopher and musician. Feel free  to come and have a chat!”"
+            android:id="@+id/aboutTextView"
+            android:layout_alignParentEnd="false"
+            android:layout_below="@+id/aboutMe"
+            android:layout_alignLeft="@+id/aboutMe"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Things I like"
+            android:id="@+id/textView2"
+            android:layout_below="@+id/aboutTextView"
+            android:layout_alignLeft="@+id/aboutMe"
+            android:layout_marginTop="16dp"
+            style="@style/Base.TextAppearance.AppCompat.Large"
+            android:layout_marginBottom="16dp"/>
+
+        <eu.fiskur.chipcloud.ChipCloud
+            xmlns:chipcloud="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/chip_cloud"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            chipcloud:deselectedColor="@color/deselected_color"
+            chipcloud:deselectedFontColor="@color/deselected_font_color"
+            chipcloud:selectedColor="@color/selected_color"
+            chipcloud:selectedFontColor="@color/selected_font_color"
+            chipcloud:deselectTransitionMS="500"
+            chipcloud:selectTransitionMS="750"
+            chipcloud:labels="@array/labels"
+            chipcloud:selectMode="required"
+
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentStart="false"
+            android:layout_alignLeft="@+id/aboutMe"
+            android:layout_marginTop="16dp"/>
+
+    </RelativeLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

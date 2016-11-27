@@ -13,10 +13,7 @@ public class PersonVM {
     }
 
     public String getName() {
-        String name = person.getName();
-        StringBuilder sb = new StringBuilder(name);
-        sb.setCharAt(0, Character.toUpperCase(sb.charAt(0)));
-        return sb.toString();
+        return person.getName();
     }
 
     public String getImage(){

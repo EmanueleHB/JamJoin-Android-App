@@ -37,7 +37,12 @@ public class FetchPeopleMock implements FetchPeople {
     @Override
     public Observable<Person> fetchPeople(int number) {
         return fetchFakePeopleService.getFakePeople(number).flatMap(fakePeople -> Observable.from(fakePeople.getResults()))
-                .map(fakePerson -> new Person(fakePerson.getName().getFirst(), fakePerson.getPicture().getLarge()));
+                .map(fakePerson -> {
+                    String name = fakePerson.getName().getFirst();
+                    StringBuilder sb = new StringBuilder(name);
+                    sb.setCharAt(0, Character.toUpperCase(sb.charAt(0)));
+                    return new Person(sb.toString(), fakePerson.getPicture().getLarge());
+                });
     }
 }
 

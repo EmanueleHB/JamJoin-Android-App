@@ -74,6 +74,7 @@ dependencies {
 
 	compile 'com.squareup.okhttp3:logging-interceptor:3.3.1'
 	compile 'com.squareup.picasso:picasso:2.5.2'
+	compile 'com.github.fiskurgit:ChipCloud:2.1.0'
 
 
 }
