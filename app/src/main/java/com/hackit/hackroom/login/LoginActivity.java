@@ -1,14 +1,20 @@
 package com.hackit.hackroom.login;
 
 import android.annotation.SuppressLint;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.RelativeLayout;
 
+import com.hackit.hackroom.PeopleActivity_;
 import com.hackit.hackroom.R;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -85,15 +91,24 @@ public class LoginActivity extends AppCompatActivity {
         }
     };
 
+    //Custom stuff
+    @BindView(R.id.signUp)
+    RelativeLayout signUp;
+    @BindView(R.id.enterRoom)
+    RelativeLayout mEnterRoom;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_login);
+        ButterKnife.bind(this);
 
         mVisible = true;
         mControlsView = findViewById(R.id.button);
         mContentView = findViewById(R.id.fullscreen_content);
+
 
 
         // Set up the user interaction to manually show or hide the system UI.
@@ -108,6 +123,18 @@ public class LoginActivity extends AppCompatActivity {
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
         findViewById(R.id.button).setOnTouchListener(mDelayHideTouchListener);
+    }
+
+    @OnClick(R.id.button)
+    void proceed(){
+        mEnterRoom.setVisibility(View.GONE);
+        signUp.setVisibility(View.VISIBLE);
+    }
+
+
+    @OnClick({R.id.login_button, R.id.google_button})
+    void startApp(){
+        PeopleActivity_.intent(this).start();
     }
 
     @Override

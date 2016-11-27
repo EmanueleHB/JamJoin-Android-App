@@ -13,21 +13,22 @@
         <activity
             android:name=".PeopleActivity_"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+            android:parentActivityName=".login.LoginActivity"
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.hackit.hackroom.login.LoginActivity"/>
         </activity>
         <activity
             android:name=".person.ProfileActivity_"
             android:label="@string/title_activity_profile"
-            android:parentActivityName=".PeopleActivity"
+            android:parentActivityName=".PeopleActivity_"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.hackit.hackroom.PeopleActivity"/>
+                android:value="com.hackit.hackroom.PeopleActivity_"/>
         </activity>
         <activity
             android:name=".login.LoginActivity"
