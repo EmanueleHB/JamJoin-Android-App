@@ -1,5 +1,5 @@
 # JamJoin-Android-App
-An app built in 24hs during the great HackKing's Hackathon.
+An app built in 24hs during the great HackKing's 3.0. Hackathon.Winner of the "Amazon Web Services - Best Use of AWS" prize.
 
 #Inspiration
 We were looking for a service that woud help us make a team at the hackathon, so we came up with this app that suggests you people you should talk to at a given event based on common interests.
